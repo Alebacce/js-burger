@@ -1,30 +1,33 @@
 var calcButton = document.getElementById('calculate-btn');
 calcButton.addEventListener('click', function() {
+
     //Prendo i checkbox nei quali sono presenti i prezzi degli ingredienti, quindi... takeIngredient
     var takeIngredient = document.getElementsByClassName('add-ingredient');
 
     //Data
     //basicPrice è il prezzo base senza aggiunte
-    //totalPrice è basicPrice + il costo dei singoli ingredienti aggiunti
-    //ingredientPrice è il costo del singolo ingrediente
     var basicPrice = 2;
-    var totalPrice;
-    var ingredientPrice;
-
 
     //Accedo ai vari prezzi dei singoli ingredienti e se questi sono
     //selezionati allora li sommo al prezzo dell'hamburger
+
+    //ingredientSelected è l'ingrediente .checked, quando la sua checkbox viene spuntata
+    //ingredientPrice è il costo del singolo ingrediente
     for(i = 0; i < takeIngredient.length; i++) {
+
         var thisIngredient = takeIngredient[i];
         var ingredientSelected = thisIngredient.checked;
-        var ingredientPrice = parseInt(thisIngredient.value);
-        console.log(ingredientSelected, ingredientPrice);
+        var ingredientPrice = parseFloat(thisIngredient.value);
+        
 
+        //Se l'ingrediente è stato selezionato allora gli sommo il prezzo base del burger
+        //+ quello del singolo ingrediente a ogni giro. Basic Price assume il valore finale
+        //della somma alla fine del ciclo
         if (ingredientSelected == true) {
-            totalPrice = basicPrice + ingredientPrice;
+            basicPrice = basicPrice + ingredientPrice;
         }
-
-        console.log(totalPrice);
     }
 
+    //Stampo il prezzo finale del panino
+    document.getElementById('price').innerHTML = '$ ' + basicPrice.toFixed(2);
 })
