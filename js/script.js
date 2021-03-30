@@ -11,6 +11,9 @@ calcButton.addEventListener('click', function() {
     var totalPrice;
     var ingredientPrice;
 
+
+    //Accedo ai vari prezzi dei singoli ingredienti e se questi sono
+    //selezionati allora li sommo al prezzo dell'hamburger
     for(i = 0; i < takeIngredient.length; i++) {
         var thisIngredient = takeIngredient[i];
         var ingredientSelected = thisIngredient.checked;
