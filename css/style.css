@@ -1,0 +1,26 @@
+/*RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*COMMON*/
+body {
+    background-color: #fff3e2;
+        font-family: 'Roboto', Arial, Helvetica, sans-serif
+}
+.wrapper {
+    width: 50%;
+}
+
+/*HEADER*/
+header {
+    height: 120px;
+    background-color: #fcbb44;
+}
+
+header h1 {
+    padding-top: 50px;
+    padding-left: 40px;
+}
