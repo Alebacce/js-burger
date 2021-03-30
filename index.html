@@ -20,10 +20,88 @@
 
         <!--MAIN-->
         <main>
+            <h2>Name your burger</h2>
+            <div class="ingredients-box clearfix">
+                <h3>Ingredients</h3>
 
+                <!--col container left-->
+                <div class="col-container">
+                    <!--First col-->
+                    <div class="col">
+                        <img class='ingredient-img' src="img/cheese.svg" alt="Cheese">
+                        <div class="col-content">
+                            <span class="ingredient">Cheese</span>
+                            <input type="checkbox" value="0.10">
+                        </div>
+                    </div>
+                    
+                    <!--Second col-->
+                    <div class="col">
+                        <img class='ingredient-img' src="img/fried-egg.svg" alt="Egg">
+                        <div class="col-content">
+                            <span class="ingredient">Egg</span>
+                            <input type="checkbox" value="0.30">
+                        </div>
+                    </div>
+                    
+                    <!--Third col-->
+                    <div class="col">
+                        <img class='ingredient-img' src="img/mustard.svg" alt="Mustard">
+                        <div class="col-content">
+                            <span class="ingredient">Mustard</span>
+                            <input type="checkbox" value="0.20">
+                        </div>
+                    </div>
+                </div>
+
+                <!--col container right-->
+                <div class="col-container">
+
+                    <!--First col-->
+                    <div class="col">
+                        <img class='ingredient-img' src="img/tomato.svg" alt="Tomato">
+                        <div class="col-content">
+                            <span class="ingredient">Tomato</span>
+                            <input type="checkbox" value="0.30">
+                        </div>
+                    </div>
+                
+                    <!--Second col-->
+                    <div class="col">
+                        <img class='ingredient-img' src="img/lettuce.svg" alt="Lettuce">
+                        <div class="col-content">
+                            <span class="ingredient">Lettuce</span>
+                            <input type="checkbox" value="0.3">
+                        </div>
+                    </div>
+                
+                    <!--Third col-->
+                    <div class="col">
+                        <img class='ingredient-img' src="img/ketchup.svg" alt="Ketchup">
+                        <div class="col-content">
+                            <span class="ingredient">Ketchup</span>
+                            <input type="checkbox" value="0.20">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Discount Coupon-->
+            <div class="coupon">
+                <label for="coupon-code">Discount Coupon</label>
+                <input type="text" placeholder="Inserisci qui il tuo coupon">
+            </div>
+
+            <div class="calculate-btn-container">
+                <button id='calculate-btn'>Calculate</button>
+            </div>
         </main>
 
         <!--FOOTER-->
+        <div class="price-container">
+            <span>Your Price</span>
+            <span id='price'> $ 2</span>
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>

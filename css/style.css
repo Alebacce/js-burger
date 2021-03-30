@@ -14,6 +14,17 @@ body {
     width: 50%;
 }
 
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.col {
+    float: left;
+    width: 50%;
+}
+
 /*HEADER*/
 header {
     height: 120px;
@@ -23,4 +34,91 @@ header {
 header h1 {
     padding-top: 50px;
     padding-left: 40px;
+}
+
+/*MAIN*/
+main {
+    padding-top: 50px;
+    padding-left: 40px;
+    background-color: white;
+}
+
+main h2 {
+    font-size: 25px;
+    font-weight: 500;
+    color: #757575;
+    padding-bottom: 50px;
+}
+
+.ingredients-box h3 {
+    padding-bottom: 30px;
+    font-size: 22px;
+}
+
+.col-container {
+    float: left;
+    width: 50%;
+}
+
+.col {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+
+    padding-bottom: 20px;
+}
+
+.col-container .col:last-child {
+    padding-bottom: 0;
+}
+
+.ingredient { 
+    padding-left: 25px;
+}
+
+.ingredient-img {
+    width: 15%;
+}
+
+.coupon {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.coupon label {
+    padding-right: 25px;
+}
+
+.coupon input {
+    padding: 5px 8px;
+    border: 0;
+    border-radius: 5px;
+    width: 60%;
+    background-color: #fff3e2;
+}
+
+.calculate-btn-container {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#calculate-btn {
+    background-color: #fcbb44;
+    border: 0;
+    border-radius: 5px;
+    padding: 12px 17px;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/*FOOTER*/
+.price-container {
+    padding: 30px;
+    background-color: #d23358;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
 }
