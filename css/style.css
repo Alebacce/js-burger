@@ -10,8 +10,12 @@ body {
     background-color: #fff3e2;
         font-family: 'Roboto', Arial, Helvetica, sans-serif
 }
+
 .wrapper {
+    height: 100vh;
     width: 50%;
+    margin: 0 auto;
+    /*Ho scelto di centrare il wrapper perché mi sembrava più bello da vedere*/
 }
 
 .clearfix::after {
@@ -28,6 +32,7 @@ body {
 /*HEADER*/
 header {
     height: 100px;
+    min-height: 100px;
     background-color: #fcbb44;
 }
 
@@ -41,6 +46,9 @@ main {
     padding-top: 30px;
     padding-left: 40px;
     background-color: white;
+    height: calc(100% - 200px);
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .burger-name label {
@@ -109,6 +117,19 @@ main {
     background-color: #fff3e2;
 }
 
+@media all and (max-width: 890px) {
+    .coupon {
+    text-align: center;
+    }
+    .coupon label {
+        display: block;
+        padding-bottom: 20px;
+    }
+    .coupon input {
+    width: 80%;
+    }
+}
+
 .calculate-btn-container {
     text-align: center;
     padding-bottom: 50px;
@@ -125,12 +146,24 @@ main {
     cursor: pointer;
 }
 
+@media all and (max-width: 890px) {
+.calculate-btn-container {
+    padding-bottom: 30px;
+    }
+}
+
 /*FOOTER*/
 .price-container {
-    padding: 30px;
+    height: 100px;
+    min-height: 100px;
+    padding: 0 40px;
     background-color: #d23358;
     color: white;
     font-size: 25px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
+
+/*Le altezze fisse nell'header e nel footer sono state usate come nell'esercizio di spotify, per 
+far scorrere il main e mantenere visibile il footer col prezzo quando la finestra del browser viene ridotta*/
