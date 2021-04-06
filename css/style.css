@@ -117,6 +117,10 @@ main {
     background-color: #fff3e2;
 }
 
+.coupon input:focus {
+    background-color: #fcbb44;
+}
+
 @media all and (max-width: 890px) {
     .coupon {
     text-align: center;
@@ -132,7 +136,6 @@ main {
 
 .calculate-btn-container {
     text-align: center;
-    padding-bottom: 50px;
 }
 
 #calculate-btn {
@@ -146,11 +149,27 @@ main {
     cursor: pointer;
 }
 
+#calculate-btn:hover {
+    background-color: #faa200;
+}
+
+#calculate-btn:active {
+    background-color: #fa8e00;
+}
+
+
 @media all and (max-width: 890px) {
 .calculate-btn-container {
     padding-bottom: 30px;
     }
 }
+
+@media all and (max-height: 750px) {
+.calculate-btn-container {
+    padding-bottom: 30px;
+    }
+}
+
 
 /*FOOTER*/
 .price-container {
